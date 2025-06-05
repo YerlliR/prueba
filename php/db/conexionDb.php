@@ -1,10 +1,10 @@
 <?php
     class conexionDb {
 
-        private $host = '127.0.0.1:3306';
-        private $db = 'u248962232_remoteorder';
-        private $user = 'u248962232_remoteorder';
-        private $password = 'u248962232_remoteordeR';
+        private $host = 'sql7.freesqldatabase.com:3306';
+        private $db = 'sql7783258';
+        private $user = 'sql7783258';
+        private $password = 'zA7i4H5Vhb';
 
         
         private $conn;
