@@ -1,7 +1,7 @@
 <?php
     class conexionDb {
 
-        private $host = 'sql303.infinityfree.com:3306';
+        private $host = 'sql303.infinityfree.com';
         private $db = 'if0_39165783_remote_order';
         private $user = 'if0_39165783';
         private $password = 'nQkvT8UZu9C93cp';
