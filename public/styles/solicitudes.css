@@ -1,0 +1,231 @@
+/* Styles for solicitudes modal and content */
+.modal-solicitudes-content {
+    max-width: 800px;
+    max-height: 90vh;
+}
+
+.solicitudes-tabs {
+    display: flex;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 20px;
+}
+
+.solicitud-tab-btn {
+    padding: 12px 20px;
+    background: none;
+    border: none;
+    color: var(--text-light);
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+    border-bottom: 2px solid transparent;
+    margin-right: 10px;
+}
+
+.solicitud-tab-btn:hover {
+    color: var(--primary-color);
+}
+
+.solicitud-tab-btn.active {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+}
+
+.solicitud-tab-content {
+    display: none;
+}
+
+.solicitud-tab-content.active {
+    display: block;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.solicitudes-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+.solicitud-card {
+    background-color: white;
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+}
+
+.solicitud-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: var(--bg-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.solicitud-empresa {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.solicitud-empresa-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--primary-gradient);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.solicitud-empresa-nombre {
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.solicitud-fecha {
+    font-size: 14px;
+    color: var(--text-light);
+}
+
+.solicitud-body {
+    padding: 15px;
+}
+
+.solicitud-asunto {
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.solicitud-mensaje {
+    color: var(--text-light);
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.solicitud-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    background-color: var(--bg-color);
+    border-top: 1px solid var(--border-color);
+}
+
+.solicitud-estado {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.estado-pendiente {
+    background-color: #fef3c7;
+    color: #d97706;
+}
+
+.estado-aceptada {
+    background-color: #d1fae5;
+    color: #059669;
+}
+
+.estado-rechazada {
+    background-color: #fee2e2;
+    color: #dc2626;
+}
+
+.solicitud-acciones {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-solicitud {
+    padding: 8px 15px;
+    border-radius: var(--border-radius-sm);
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    border: none;
+}
+
+.btn-aceptar {
+    background-color: #d1fae5;
+    color: #059669;
+}
+
+.btn-aceptar:hover {
+    background-color: #059669;
+    color: white;
+}
+
+.btn-rechazar {
+    background-color: #fee2e2;
+    color: #dc2626;
+}
+
+.btn-rechazar:hover {
+    background-color: #dc2626;
+    color: white;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--text-light);
+}
+
+.empty-state i {
+    font-size: 48px;
+    margin-bottom: 15px;
+    opacity: 0.5;
+}
+
+.empty-state p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.loading-spinner {
+    text-align: center;
+    padding: 30px;
+    color: var(--text-light);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .solicitud-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .solicitud-footer {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+    
+    .solicitud-acciones {
+        width: 100%;
+        justify-content: flex-end;
+    }
+}
